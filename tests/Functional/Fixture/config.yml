@@ -1,0 +1,19 @@
+
+lamoda_tactician_rate_limit:
+    logging:
+        service: custom_logger
+    rate_limiter:
+        stiphle:
+            service: stiphle
+
+services:
+    _defaults:
+        public: true
+
+    stiphle:
+        class: Stiphle\Throttle\LeakyBucket
+
+    test.lamoda_tactician_rate_limit.middleware: '@lamoda_tactician_rate_limit.middleware'
+
+    custom_logger:
+        class: Psr\Log\NullLogger

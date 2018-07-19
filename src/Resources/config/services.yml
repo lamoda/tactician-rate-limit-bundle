@@ -1,0 +1,9 @@
+services:
+    Lamoda\Tactician\RateLimit\RateLimitMiddleware:
+        class: Lamoda\Tactician\RateLimit\RateLimitMiddleware
+        arguments:
+            - '@lamoda_tactician_rate_limit.provider'
+            - '@lamoda_tactician_rate_limit.rate_limiter'
+            - '@lamoda_tactician_rate_limit.logger'
+
+    lamoda_tactician_rate_limit.middleware: '@Lamoda\Tactician\RateLimit\RateLimitMiddleware'

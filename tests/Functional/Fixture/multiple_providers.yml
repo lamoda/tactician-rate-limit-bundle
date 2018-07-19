@@ -1,0 +1,19 @@
+
+services:
+    first:
+        class: Lamoda\Tactician\RateLimit\RateLimiter\MatchingCommandClassRateLimitProvider
+        arguments:
+            - stdClass
+            - 1
+            - 2
+        tags:
+            - { name: lamoda_tactician_rate_limit.provider }
+
+    second:
+        class: Lamoda\Tactician\RateLimit\RateLimiter\MatchingCommandClassRateLimitProvider
+        arguments:
+            - stdClass
+            - 1
+            - 2
+        tags:
+            - { name: lamoda_tactician_rate_limit.provider }
