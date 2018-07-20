@@ -30,11 +30,5 @@
             "email": "pavel.agaletskiy@lamoda.ru"
         }
     ],
-    "minimum-stability": "stable",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:lamoda/tactician-rate-limit.git"
-        }
-    ]
+    "minimum-stability": "stable"
 }
