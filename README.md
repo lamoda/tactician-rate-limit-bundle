@@ -1,5 +1,5 @@
 # Lamoda Tactician rate limit middleware bundle
-Utility wrapper for https://github.com:lamoda/tactician-rate-limit
+Utility wrapper for https://github.com/lamoda/tactician-rate-limit
 
 ## Installation
 
