@@ -11,9 +11,12 @@ final class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $builder = new TreeBuilder();
+        $builder = new TreeBuilder('lamoda_tactician_rate_limit');
 
-        $root = $builder->root('lamoda_tactician_rate_limit');
+        // Keep compatibility with symfony/config < 4.2
+        $root = method_exists(TreeBuilder::class, 'getRootNode')
+            ? $builder->getRootNode()
+            : $builder->root('lamoda_tactician_rate_limit');
 
         $root
             ->children()
